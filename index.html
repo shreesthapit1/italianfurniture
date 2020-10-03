@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="assets/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         .custom-nav {
@@ -39,6 +40,16 @@
             font-weight: 600;
         }
 
+        .modern-simplicity-section {
+            color: #fff;
+            margin-top: 90px;
+        }
+
+        .modern-simplicity-section h2 {
+            color: #ffb611;
+            font-weight: 600;
+        }
+
         .gallery-section h2 {
             color: #ffb611;
             font-weight: 600;
@@ -50,6 +61,20 @@
             position: relative;
             top: -300px;
             z-index: -1;
+        }
+
+        .modern-simplicity-bg {
+            height: 220px;
+            position: relative;
+            top: -300px;
+            z-index: -1;
+            background-image: url(https://textures.world/wp-content/uploads/2018/10/Walnut-Wood-Seamless-Background-Texture-7.jpg);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .modern-simplicity-bg {
+                height: 300px;
+            }
         }
 
         .effect-image-container {
@@ -158,21 +183,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="#gallery-section">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#modern-simplicity">Mobile Simplicity</a>
             </li>
 
         </ul>
     </div>
 </nav>
 
-<div class="container">
+<div class="container" data-aos="fade-up">
     <div class="mt-3">
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -224,7 +252,7 @@
     </div>
 </section>
 
-<section class="about-section">
+<section class="about-section" id="about">
     <div class="container">
         <h2>About Us</h2>
 
@@ -232,21 +260,22 @@
             <div class="col-7">
                 <div class="mt-5">
                     <p>
-                        Your home depicts your personality, and it’s your tastes, preferences and choices that make it
-                        look the way you want it to.
-                    </p>
-                    <p>
-                        Today’s well known home furnishing brand Italian Furniture and Supplies was founded in 1989, with a
-                        goal to upgrade the quality of home decor in Nepal.
-                    </p>
+                        Italian furniture established in 2009 a furniture manufacturing company in kathmandu,Nepal have
+                        been providing modern and premium quality furnitures in service for past 10 years.Our aim is to
+                        manufacture standard quality furnitures in our home soil using modern means of
+                        equipments,experienced workers and imported raw materials to create stylish,good looking and
+                        comfortable furnitures carefully selected to offer the best value for money without compromising
+                        on quality.However we are not a big company still but time and again our progression,dedication
+                        and hard work are constantly improving over a period of time.
 
+                    </p>
 
 
                 </div>
             </div>
 
             <div class="col-5">
-                <img src="assets/images/11.png" alt="Italian Furniture" class="img-fluid">
+                <img src="assets/images/11.png" alt="Italian Furniture" class="img-fluid" data-aos="fade-right">
             </div>
         </div>
     </div>
@@ -255,25 +284,51 @@
     </div>
 </section>
 
-<section class="gallery-section">
+<section class="gallery-section" data-aos="fade-up-right" id="gallery-section">
 
     <div class="container">
         <h2>Gallery</h2>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-4 col-sm-6">
-                <a data-fancybox="gallery" class="effect-image-container" href="assets/images/02.jpg">
+                <a data-fancybox="gallery" class="effect-image-container" href="assets/images/sunflower-carving-bed.jpg"
+                   title="Handle Sofa">
                     <div class="card">
                         <div class="box">
                             <div class="imgBx">
-                                <img src="assets/images/02.jpg" class="img-fluid">
+                                <img src="assets/images/sunflower-carving-bed.jpg" class="img-fluid" alt="Handle Sofa">
                             </div>
                             <div class="contentBx">
                                 <div>
-                                    <h3>Post Title</h3>
+                                    <h3>Sunflower Carving Bed</h3>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been
-                                        the
+                                        White and Golden Color | Kings Size
+                                    </p>
+                                    <p>
+                                        Price: Rs 1,20,000
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <a data-fancybox="gallery" class="effect-image-container" href="assets/images/02.jpg"
+                   title="Handle Sofa">
+                    <div class="card">
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="assets/images/02.jpg" class="img-fluid" alt="Handle Sofa">
+                            </div>
+                            <div class="contentBx">
+                                <div>
+                                    <h3>Handle Sofa</h3>
+                                    <p>
+                                        3-2-1 Seater | Beige Color
+                                    </p>
+                                    <p>
+                                        Price: Rs 1,08,000
                                     </p>
                                 </div>
                             </div>
@@ -287,15 +342,16 @@
                     <div class="card">
                         <div class="box">
                             <div class="imgBx">
-                                <img src="assets/images/03.jpg" class="img-fluid">
+                                <img src="assets/images/03.jpg" class="img-fluid" alt="Chester Sofa">
                             </div>
                             <div class="contentBx">
                                 <div>
-                                    <h3>Post Title</h3>
+                                    <h3>Chester Sofa</h3>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been
-                                        the
+                                        3-2-2 Seater | Walnut & Brown Rexine Color
+                                    </p>
+                                    <p>
+                                        Price: Rs 2,80,000 (Incl. Coffee Table Additional Rs 30,000)
                                     </p>
                                 </div>
                             </div>
@@ -312,11 +368,12 @@
                             </div>
                             <div class="contentBx">
                                 <div>
-                                    <h3>Post Title</h3>
+                                    <h3>Columbus Sofa</h3>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been
-                                        the
+                                        3-2-2 Seater | Cream Color
+                                    </p>
+                                    <p>
+                                        Price: Rs 1,96,000
                                     </p>
                                 </div>
                             </div>
@@ -326,19 +383,21 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <a data-fancybox="gallery" class="effect-image-container" href="assets/images/09.jpg">
+                <a data-fancybox="gallery" class="effect-image-container"
+                   href="assets/images/walnut-carving-wardrobe.jpg">
                     <div class="card">
                         <div class="box">
                             <div class="imgBx">
-                                <img src="assets/images/09.jpg" class="img-fluid">
+                                <img src="assets/images/walnut-carving-wardrobe.jpg" class="img-fluid">
                             </div>
                             <div class="contentBx">
                                 <div>
-                                    <h3>Post Title</h3>
+                                    <h3>Sunflower Carving Wardrobe</h3>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been
-                                        the
+                                        Walnut and Silver Color
+                                    </p>
+                                    <p>
+                                        Price: Rs 95,000
                                     </p>
                                 </div>
                             </div>
@@ -352,15 +411,16 @@
                     <div class="card">
                         <div class="box">
                             <div class="imgBx">
-                                <img src="assets/images/10.jpg" class="img-fluid">
+                                <img src="assets/images/10.jpg" class="img-fluid" title="Lotus Sofa">
                             </div>
                             <div class="contentBx">
                                 <div>
-                                    <h3>Post Title</h3>
+                                    <h3>Lotus Sofa</h3>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been
-                                        the
+                                        3-2-2 Seater | Walnut Color | Turkey Fabric
+                                    </p>
+                                    <p>
+                                        Price: Rs 3,15,000
                                     </p>
                                 </div>
                             </div>
@@ -374,15 +434,16 @@
                     <div class="card">
                         <div class="box">
                             <div class="imgBx">
-                                <img src="assets/images/08.jpg" class="img-fluid">
+                                <img src="assets/images/08.jpg" class="img-fluid" title="Silver Carving Dining Set">
                             </div>
                             <div class="contentBx">
                                 <div>
-                                    <h3>Post Title</h3>
+                                    <h3>Silver Carving Dining Set</h3>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been
-                                        the
+                                        6 Chair | Silver Color
+                                    </p>
+                                    <p>
+                                        Price: Rs 1,80,000
                                     </p>
                                 </div>
                             </div>
@@ -396,6 +457,33 @@
 
 </section>
 
+<section class="modern-simplicity-section" id="modern-simplicity">
+    <div class="container">
+        <h2>MODERN SIMPLICITY</h2>
+
+        <div class="row">
+            <div class="col-7">
+                <div class="mt-5">
+                    <p>
+                        We embrace variety of contemporary beds,wardrobe,dining sets,sofas and more for
+                        commercial,retails,hospitality and residential fields .All our products are genuine and provided
+                        with gurantee and warranty.
+                    </p>
+
+
+                </div>
+            </div>
+
+            <div class="col-5">
+                <img src="assets/images/11.png" alt="Italian Furniture" class="img-fluid" data-aos="fade-down-left">
+            </div>
+        </div>
+    </div>
+    <div class="modern-simplicity-bg">
+
+    </div>
+</section>
+
 <section class="mt-5">
     <footer class="footer-block">
         <div class="container">
@@ -406,11 +494,16 @@
                     <p>Phelo Pool, Kathmandu Nepal</p>
                     <p>italianfurniture@gmail.com</p>
                     <p>9849729795</p>
-                    <a href="" class="icon-link">
+                    <a href="https://www.facebook.com/italianfurniturenepal/" title="Italian Furniture Facebook"
+                       class="icon-link">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="" class="icon-link">
+                    <a href="https://www.instagram.com/itafurniture/" title="Italian Furniture Instagram"
+                       class="icon-link">
                         <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/ItalianNepal" title="Italian Furniture Twitter" class="icon-link">
+                        <i class="fab fa-twitter"></i>
                     </a>
                 </div>
 
@@ -436,7 +529,10 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script>
     var mySwiper = new Swiper('.swiper-container', {
         // Optional parameters
